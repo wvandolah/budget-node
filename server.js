@@ -21,9 +21,6 @@ server.use('/api', routes);
 
 
 
-
-
-
 module.exports = {
     server
 };
