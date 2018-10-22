@@ -9,7 +9,8 @@ const letsMakeAToken = user => {
       sub: user.id,
       iat: timestamp,
       username: user.username,
-      externalID: user.externalID
+      externalID: user.externalID,
+      // admin: user.admin
     };
     const options = {
       expiresIn: '5m'

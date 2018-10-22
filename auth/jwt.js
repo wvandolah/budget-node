@@ -10,7 +10,9 @@ const jwtOptions = {
 };
 
 passport.use(new passportJwt.Strategy(jwtOptions, (payload, done) => {
-    
+    // it is not checking the expired token time
+    // const dateNow = new Date();
+    // console.log(payload.exp, dateNow.getTime())
     db('users')
         .where({ id: payload.sub })
         .first()
